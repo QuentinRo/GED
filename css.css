@@ -1,0 +1,20 @@
+form {
+
+}
+
+label{
+	width: 20%;
+	display: block;
+	float: left;
+}
+
+
+table{
+
+	width: 30%;
+}
+/*
+td, th {
+border: thin solid #6495ed;
+width: 50%;
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Exercice GEM</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css.css">
   <script src="script.js"></script>
   <!-- 
 	Auteur 					: Quentin Rossier
@@ -44,7 +44,7 @@
 
 <?php 
 	$row = 1;
-		 if (($handle = fopen("data.csv","r")) !== FALSE) 
+	if (($handle = fopen("data.csv","r")) !== FALSE) 
 		{
 			while(($data = fgetcsv($handle,1000, ",")) !==FALSE)
 			{

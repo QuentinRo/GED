@@ -10,12 +10,15 @@
 	// https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql/913099-transmettre-des-donnees-avec-les-formulaires
 
 	// AND isset($FILES['fichier']['webkitRelativePath'])Pour le chemin du fichier
-	if (isset($_FILES['fichier']['name']) AND isset($_FILES['fichier']['size']) )
+	if (isset($_FILES['fichier']['name']) AND isset($_FILES['fichier']['size']) AND isset($_FILES['fichier']['tmp_name']) )
 	{
 	
 		$name = $_FILES['fichier']['name'];
 		$size = $_FILES['fichier']['size'];
-	
+
+		$link = $_FILES['fichier']['tmp_name'];
+
+
 	}
 
 	if (isset($_POST['Option']) )
@@ -25,6 +28,8 @@
 	
 	}
 
+	// a href"link" dowload = pour avoir le lien clicable mais il faut récuperer le truc et retirer le "/" visiblement
+	//manque d'attraper le lien dans le post
 		//récuperer les infos du formulaire
 
 		//récuperer les infos du fichier
@@ -32,9 +37,9 @@
 		//sauvegarder le fichier
 		// https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/file
 		$handle =fopen("data.csv", "a+");
-		$list = array($name,$option,$size);
+		$list = array($name,$option,$size,$link);
 		// Je n'ai pas de tableau multiple, il faut voir si je ne peut pas le faire sans foreach -----> fputcsv($handle, fields);
 		fputcsv($handle, $list);
 
-		header("location: index.php");
+		// header("location: index.php");
 	
