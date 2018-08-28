@@ -5,6 +5,8 @@
 	Date de création		: 28.08.2018	
 	Date de modification 	: 28.08.2018
 	Description : écriture du fichier envoyé dans un CSV
+
+	solution à voir https://www.developpez.net/forums/d271948/php/langage/fichiers/input-file-recuperation-chemin/
  */
 	// Test si le fichier à bien été envoyé  et sans erreur
 	// https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql/913099-transmettre-des-donnees-avec-les-formulaires
@@ -18,7 +20,11 @@
 
 		$link = $_FILES['fichier']['tmp_name'];
 
+	}
 
+	if (isset($_POST['filepath']))
+	{
+		echo $_POST['filepath'];
 	}
 
 	if (isset($_POST['Option']) )
@@ -44,7 +50,7 @@
 		// header("location: index.php");
 	
 
-	/* solution javascripte ? 
+	/* solution javascripte ? solution en flash visiblement 
 		https://www.sitepoint.com/community/t/getting-the-full-path-with-input-type-file/1690/5
 		
 fkieber

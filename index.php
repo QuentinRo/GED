@@ -15,7 +15,7 @@
 </head>
 <body>
 
-	<form action="traitement.php" method="post" enctype="multipart/form-data">
+	<form action="traitement.php" method="post" enctype="multipart/form-data"  onsubmit="this.filepath.value=this.fichier.value">
 		<div>
 			<title> </title>
 			<LABEL name="Title">Titre</LABEL>
@@ -35,6 +35,7 @@
 		<div>
 			<LABEL>Sélectionner un fichier</LABEL>
 			<INPUT type="file" name="fichier">
+			<input type="hidden" name="filepath">
 		</div>
 
 		<div>
