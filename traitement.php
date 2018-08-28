@@ -43,3 +43,29 @@
 
 		// header("location: index.php");
 	
+
+	/* solution javascripte ? 
+		https://www.sitepoint.com/community/t/getting-the-full-path-with-input-type-file/1690/5
+		
+fkieber
+SitePoint Member
+Sep '04
+Hi,
+
+I search also an anser to this question. An because i have found nothing i have created a javascript that can be usefull.
+
+Here it is.
+
+<form method="what you want" enctype="do not use multipart/form-data to avoid transmission of the file contents to the server">
+<input type="hidden" name="full_path_real">
+<input name="full_path_fake" type="file" onchange='document.forms[0].elements["full_path_real"].value=document.forms[0].elements["full_path_fake"].value'>
+<input value="Go" type="submit">
+</form>
+
+Now use $REQUEST['fullpath_real'] and forgot $REQUEST['fullpath_fake'];
+
+That's all folks for all javascript able internet clients.
+
+Hope it was what you want. In my case i am happy.
+
+
