@@ -19,7 +19,9 @@
 		<div>
 			<title> </title>
 			<LABEL name="Title">Titre</LABEL>
-		<div>
+			<input type="text" name="essais">
+		</div>
+
 
 		<div>
 			<LABEL name="Cat">Categorie</LABEL>
@@ -28,28 +30,49 @@
 				<OPTION>Etude
 				<OPTION>PHP			
 			</SELECT>
-		<div>
+		</div>
 
 		<div>
 			<LABEL>Sélectionner un fichier</LABEL>
-			<!--accept="image/JPG" -->
-			<INPUT type="file" name="file">
-		<div>
+			<INPUT type="file" name="fichier">
+		</div>
 
 		<div>
 			<BUTTON>Télécharger</BUTTON>
 		</div>
 	</form>
 
+<?php 
+	$row = 1;
+		 if (($handle = fopen("data.csv","r")) !== FALSE) 
+		{
+			while(($data = fgetcsv($handle,1000, ",")) !==FALSE)
+			{
+				$num = count($data);
+				$row++;
+				echo "<table>";
+				for ($c=0; $c < $num; $c++) 
+				{
+					echo "
+						<td>$data[$c]
+						";
+
+				}
+				echo "</table>";
+			}
+			fclose($handle);
+		}
+
+?>
 	<!--
 	Difficulté 1 enctype="multipart/form-data"
 	Difficulté 2 crée et lire le fichier csv
 		simple d'utilisation et rappelle des fonctions
-	 -->
-	 <?php
+	
+	
 
 	 // lecture du CSV et affichage de toutes les données (plus qu'à faire le tableau)
-
+	
 		 $row = 1;
 		 if (($handle = fopen("data.csv","r")) !== FALSE) 
 		{
@@ -66,6 +89,6 @@
 			fclose($handle);
 		}
 	 ?>
-
+ -->
 </body>
 </html>
