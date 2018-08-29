@@ -9,12 +9,17 @@ label{
 }
 
 
-table{
-
-	width: 30%;
-}
-/*
-td, th {
-border: thin solid #6495ed;
-width: 50%;
-}
+table {
+ border-collapse:collapse;
+ width:40%;
+ }
+th, td {
+ border:1px solid black;
+ width:20%;
+ }
+td {
+ text-align:center;
+ }
+caption {
+ font-weight:bold
+ }
