@@ -73,11 +73,10 @@
 
 ?>
 	<!--
-	Difficulté 1 enctype="multipart/form-data"
-	Difficulté 2 crée et lire le fichier csv
-		simple d'utilisation et rappelle des fonctions
-	Dif 3, récupérer le chemin du fichier pour pouvoir le télécharger.
-	
+	Difficulté Rencontrées durant le projet :
+	1 : Lire et écrire le fichier csv (dégraissage néscessaire).
+	2 : Récupérer le chemin du fichier pour pouvoir mettre le liens téléchargable.
+	3 : Faire une mise en page sympatique avec le CSS
  -->
 </body>
 </html>
